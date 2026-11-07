@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pemesanan | Foliora</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Menghubungkan data utama -->
+    <script src="js/data.js" defer></script>
+
+    <!-- Menghubungkan JavaScript checkout -->
+    <script src="js/checkout.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <a class="brand brand-light sidebar-brand"
+               href="dashboard.html">
+
+                <span class="brand-mark">❧</span>
+                <span>FOLIORA</span>
+
+            </a>
+
+            <p class="sidebar-label">MENU UTAMA</p>
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="stok.html">
+                    <span>▤</span>
+                    Katalog Buku
+                </a>
+
+                <a class="active" href="checkout.html">
+                    <span>＋</span>
+                    Pemesanan
+                </a>
+
+                <a href="tracking.html">
+                    <span>⌁</span>
+                    Tracking
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <p class="sidebar-label">AKUN</p>
+
+                <button
+                    id="logoutBtn"
+                    class="sidebar-link"
+                    type="button">
+
+                    <span>↪</span>
+                    Keluar
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="eyebrow">TRANSAKSI TOKO</p>
+
+                    <h2>Pemesanan Buku</h2>
+
+                </div>
+
+                <a
+                    class="btn btn-secondary"
+                    href="dashboard.html">
+
+                    ← Dashboard
+
+                </a>
+
+            </header>
+
+
+
+            <!-- INTRO -->
+            <section class="page-intro">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FOLIORA BOOKSTORE
+                    </p>
+
+                    <h1 class="page-title">
+                        Buat Pesanan
+                    </h1>
+
+                    <p class="page-description">
+                        Isi data pemesan, pilih buku,
+                        dan tentukan metode pembayaran.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FORM CHECKOUT DAN RINGKASAN -->
+            <div class="checkout-layout">
+
+
+                <!-- FORM PEMESANAN -->
+                <section class="card">
+
+                    <h3 class="card-title">
+                        Informasi Pemesan
+                    </h3>
+
+                    <p class="muted small">
+                        Lengkapi informasi berikut untuk
+                        melakukan pemesanan buku.
+                    </p>
+
+
+                    <form
+                        id="checkoutForm"
+                        class="form-stack">
+
+
+                        <!-- NAMA PEMESAN -->
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Nama Lengkap
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                class="form-control"
+                                placeholder="Masukkan nama lengkap"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- NOMOR TELEPON -->
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Nomor Telepon
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                class="form-control"
+                                placeholder="Contoh: 081234567890"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- ALAMAT -->
+                        <div class="form-group">
+
+                            <label for="customerAddress">
+                                Alamat Pengiriman
+                            </label>
+
+                            <textarea
+                                id="customerAddress"
+                                class="form-control"
+                                placeholder="Masukkan alamat lengkap penerima"
+                                required></textarea>
+
+                        </div>
+
+
+
+                        <!-- PILIH BUKU -->
+                        <div class="form-group">
+
+                            <label for="orderBook">
+                                Pilih Buku
+                            </label>
+
+                            <select
+                                id="orderBook"
+                                class="form-control"
+                                required>
+
+                                <option value="">
+                                    Memuat katalog buku...
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- JUMLAH -->
+                        <div class="form-group">
+
+                            <label for="orderQty">
+                                Jumlah Buku
+                            </label>
+
+                            <input
+                                type="number"
+                                id="orderQty"
+                                class="form-control"
+                                value="1"
+                                min="1"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- METODE PEMBAYARAN -->
+                        <div class="form-group">
+
+                            <label for="paymentMethod">
+                                Metode Pembayaran
+                            </label>
+
+                            <select
+                                id="paymentMethod"
+                                class="form-control"
+                                required>
+
+                                <option value="">
+                                    Pilih metode pembayaran
+                                </option>
+
+                                <option value="Transfer Bank">
+                                    Transfer Bank
+                                </option>
+
+                                <option value="E-Wallet">
+                                    E-Wallet
+                                </option>
+
+                                <option value="COD">
+                                    Cash On Delivery (COD)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- TOMBOL PESAN -->
+                        <button
+                            class="btn btn-primary btn-block"
+                            type="submit">
+
+                            Buat Pesanan →
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- PESAN HASIL TRANSAKSI -->
+                    <p
+                        id="checkoutMessage"
+                        class="form-message"
+                        aria-live="polite">
+                    </p>
+
+                </section>
+
+
+
+                <!-- RINGKASAN PEMBAYARAN -->
+                <aside class="card order-summary">
+
+                    <span class="summary-label">
+                        RINGKASAN PEMBAYARAN
+                    </span>
+
+                    <h3>Detail Pesanan</h3>
+
+
+                    <div class="summary-row">
+
+                        <span>Buku</span>
+
+                        <strong id="summaryBook">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Harga Satuan</span>
+
+                        <strong id="summaryPrice">
+                            Rp0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Jumlah</span>
+
+                        <strong id="summaryQty">
+                            1
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row summary-total">
+
+                        <span>Total Pembayaran</span>
+
+                        <strong id="summaryTotal">
+                            Rp0
+                        </strong>
+
+                    </div>
+
+
+                    <p class="muted small">
+                        Total pembayaran dihitung otomatis
+                        berdasarkan buku dan jumlah yang dipilih.
+                    </p>
+
+                </aside>
+
+            </div>
+
+
+
+            <!-- RIWAYAT TRANSAKSI -->
+            <section
+                class="card history-section"
+                id="riwayat">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            RIWAYAT PEMBELIAN
+                        </p>
+
+                        <h3>History Transaksi</h3>
+
+                        <p class="muted">
+                            Daftar transaksi yang telah
+                            dicatat di Foliora.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TABEL TRANSAKSI -->
+                <div class="table-responsive">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Nomor DO</th>
+
+                                <th>Pemesan</th>
+
+                                <th>Buku</th>
+
+                                <th>Total Pembayaran</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="orderHistoryBody">
+
+                            <!-- Data transaksi ditampilkan melalui JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                © 2026 Foliora Bookstore.
+
+                Every Page, A New Journey.
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

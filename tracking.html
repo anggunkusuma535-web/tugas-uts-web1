@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tracking Pengiriman | Foliora</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Menghubungkan data utama -->
+    <script src="js/data.js" defer></script>
+
+    <!-- Menghubungkan JavaScript Tracking -->
+    <script src="js/tracking.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <a class="brand brand-light sidebar-brand"
+               href="dashboard.html">
+
+                <span class="brand-mark">❧</span>
+                <span>FOLIORA</span>
+
+            </a>
+
+
+            <p class="sidebar-label">MENU UTAMA</p>
+
+
+            <!-- NAVIGASI -->
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="stok.html">
+                    <span>▤</span>
+                    Katalog Buku
+                </a>
+
+                <a href="checkout.html">
+                    <span>＋</span>
+                    Pemesanan
+                </a>
+
+                <a class="active" href="tracking.html">
+                    <span>⌁</span>
+                    Tracking
+                </a>
+
+            </nav>
+
+
+            <!-- MENU KELUAR -->
+            <div class="sidebar-bottom">
+
+                <p class="sidebar-label">AKUN</p>
+
+                <button
+                    id="logoutBtn"
+                    class="sidebar-link"
+                    type="button">
+
+                    <span>↪</span>
+                    Keluar
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="eyebrow">FOLIORA BOOKSTORE</p>
+
+                    <h2>Tracking Pengiriman</h2>
+
+                </div>
+
+
+                <div class="user-chip">
+
+                    <span class="avatar">F</span>
+
+                    <span>Foliora</span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- INTRO HALAMAN -->
+            <section class="page-intro">
+
+                <p class="eyebrow">
+                    INFORMASI PENGIRIMAN
+                </p>
+
+                <h1 class="page-title">
+                    Lacak Pesananmu
+                </h1>
+
+                <p class="page-description">
+                    Pantau perjalanan buku yang kamu pesan
+                    melalui nomor Delivery Order (DO).
+                </p>
+
+            </section>
+
+
+
+            <!-- FORM PENCARIAN TRACKING -->
+            <section class="card tracking-search-card">
+
+                <div class="tracking-search-heading">
+
+                    <span class="tracking-search-icon">⌕</span>
+
+                    <div>
+
+                        <h3>Cari Nomor Pengiriman</h3>
+
+                        <p class="muted">
+                            Masukkan nomor DO untuk melihat
+                            informasi pengiriman.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="trackingForm"
+                    class="tracking-search">
+
+                    <div class="form-group">
+
+                        <label for="trackingNumber">
+                            Nomor Delivery Order (DO)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="trackingNumber"
+                            class="form-control"
+                            placeholder="Contoh: 20230012"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Cari Pesanan →
+
+                    </button>
+
+                </form>
+
+
+                <!-- PESAN HASIL PENCARIAN -->
+                <p
+                    id="trackingMessage"
+                    class="form-message"
+                    aria-live="polite">
+                </p>
+
+            </section>
+
+
+
+            <!-- HASIL TRACKING -->
+            <section
+                id="trackingResult"
+                hidden>
+
+                <!-- Detail pengiriman akan dibuat oleh tracking.js -->
+
+            </section>
+
+
+
+            <!-- INFORMASI TAMBAHAN -->
+            <section class="tracking-help">
+
+                <div class="tracking-help-icon">
+                    
+                </div>
+
+                <div>
+
+                    <h3>Informasi Tracking</h3>
+
+                    <p>
+                        Pastikan nomor Delivery Order yang
+                        dimasukkan sudah benar. Nomor DO dapat
+                        ditemukan pada riwayat transaksi setelah
+                        pemesanan berhasil dilakukan.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                © 2026 Foliora Bookstore.
+
+                Every Page, A New Journey.
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katalog Buku | Foliora</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Menghubungkan data buku -->
+    <script src="js/data.js" defer></script>
+
+    <!-- Menghubungkan JavaScript stok -->
+    <script src="js/stok.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <a class="brand brand-light sidebar-brand"
+               href="dashboard.html">
+
+                <span class="brand-mark">❧</span>
+                <span>FOLIORA</span>
+
+            </a>
+
+            <p class="sidebar-label">MENU UTAMA</p>
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a class="active" href="stok.html">
+                    <span>▤</span>
+                    Katalog Buku
+                </a>
+
+                <a href="checkout.html">
+                    <span>＋</span>
+                    Pemesanan
+                </a>
+
+                <a href="tracking.html">
+                    <span>⌁</span>
+                    Tracking
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <p class="sidebar-label">AKUN</p>
+
+                <button
+                    id="logoutBtn"
+                    class="sidebar-link"
+                    type="button">
+
+                    <span>↪</span>
+                    Keluar
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="eyebrow">FOLIORA BOOKSTORE</p>
+
+                    <h2>Katalog Buku</h2>
+
+                </div>
+
+                <div class="user-chip">
+
+                    <span class="avatar">F</span>
+
+                    <span id="userName">
+                        Foliora Admin
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- JUDUL HALAMAN -->
+            <section class="page-intro">
+
+                <div>
+
+                    <p class="eyebrow">
+                        KOLEKSI PILIHAN FOLIORA
+                    </p>
+
+                    <h1>Informasi Stok Buku</h1>
+
+                    <p class="muted">
+                        Kelola koleksi buku dan pantau
+                        ketersediaan stok secara praktis.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- STATISTIK KATALOG -->
+            <section class="stats-grid">
+
+                <article class="stat-card">
+
+                    <span class="stat-icon">▤</span>
+
+                    <p>Total Judul Buku</p>
+
+                    <h2 id="bookTotal">5</h2>
+
+                    <small>Koleksi buku Foliora</small>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <span class="stat-icon">▣</span>
+
+                    <p>Total Stok Buku</p>
+
+                    <h2 id="stockTotal">1.587</h2>
+
+                    <small>Jumlah seluruh eksemplar</small>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- DAFTAR KATALOG -->
+            <section class="content-card">
+
+                <div class="table-heading">
+
+                    <div>
+
+                        <h3>Daftar Katalog Buku</h3>
+
+                        <p class="muted">
+                            Data koleksi buku yang tersedia.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary"
+                        id="showAddForm"
+                        type="button">
+
+                        + Tambah Buku
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- FORM TAMBAH BUKU -->
+                <div
+                    class="add-book-panel"
+                    id="addBookPanel"
+                    hidden>
+
+                    <h3>Tambah Buku Baru</h3>
+
+                    <p class="muted">
+                        Masukkan informasi buku yang ingin
+                        ditambahkan ke katalog.
+                    </p>
+
+                    <form id="addBookForm" class="form-stack">
+
+                        <div class="form-group">
+
+                            <label for="bookTitle">
+                                Nama Buku
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bookTitle"
+                                class="form-control"
+                                placeholder="Masukkan nama buku"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookPrice">
+                                Harga Buku (Rp)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bookPrice"
+                                class="form-control"
+                                placeholder="Contoh: 150000"
+                                min="1"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookStock">
+                                Jumlah Stok
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bookStock"
+                                class="form-control"
+                                placeholder="Masukkan jumlah stok"
+                                min="0"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                Simpan Buku
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn btn-ghost"
+                                id="cancelAdd">
+
+                                Batal
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- PENCARIAN BUKU -->
+                <div class="table-tools">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="searchBook"
+                            class="form-control"
+                            placeholder="Cari nama, kode, atau jenis buku...">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INFORMASI JUMLAH BUKU -->
+                <p
+                    id="bookCount"
+                    class="muted small">
+
+                    Menampilkan data buku.
+
+                </p>
+
+
+
+                <!-- TABEL BUKU -->
+                <div class="table-responsive">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>No</th>
+
+                                <th>Cover Buku</th>
+
+                                <th>Kode Barang</th>
+
+                                <th>Nama Buku</th>
+
+                                <th>Jenis Buku</th>
+
+                                <th>Edisi</th>
+
+                                <th>Harga</th>
+
+                                <th>Stok</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="bookTableBody">
+
+                            <!-- Data buku ditampilkan melalui JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                © 2026 Foliora Bookstore.
+
+                Every Page, A New Journey.
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

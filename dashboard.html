@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Foliora</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Menghubungkan data utama -->
+    <script src="js/data.js" defer></script>
+
+    <!-- Menghubungkan JavaScript Dashboard -->
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- SIDEBAR / MENU SAMPING -->
+        <aside class="sidebar">
+
+            <!-- Logo Foliora -->
+            <a class="brand brand-light sidebar-brand"
+               href="dashboard.html">
+
+                <span class="brand-mark">❧</span>
+                <span>FOLIORA</span>
+
+            </a>
+
+
+            <p class="sidebar-label">MENU UTAMA</p>
+
+            <!-- Navigasi -->
+            <nav class="sidebar-menu">
+
+                <a class="active" href="dashboard.html">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="stok.html">
+                    <span>▤</span>
+                    Katalog Buku
+                </a>
+
+                <a href="checkout.html">
+                    <span>＋</span>
+                    Pemesanan
+                </a>
+
+                <a href="tracking.html">
+                    <span>⌁</span>
+                    Tracking
+                </a>
+
+            </nav>
+
+
+            <!-- Tombol Keluar -->
+            <div class="sidebar-bottom">
+
+                <p class="sidebar-label">AKUN</p>
+
+                <button
+                    id="logoutBtn"
+                    class="sidebar-link"
+                    type="button">
+
+                    <span>↪</span>
+                    Keluar
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+
+
+            <!-- HEADER DASHBOARD -->
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">FOLIORA BOOKSTORE</p>
+                    <h2>Dashboard</h2>
+                </div>
+
+                <div class="user-chip">
+
+                    <span class="avatar">F</span>
+
+                    <span id="userName">
+                        Admin Foliora
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- BANNER SAMBUTAN -->
+            <section class="welcome-banner">
+
+                <div>
+
+                    <p class="eyebrow light-eyebrow">
+                        RUANG BACA DAN CERITA
+                    </p>
+
+                    <h1 id="greeting">
+                        Selamat datang!
+                    </h1>
+
+                    <p>
+                        Semoga hari ini penuh inspirasi
+                        dan cerita baru.
+                    </p>
+
+                </div>
+
+                <div class="welcome-leaf" aria-hidden="true">
+                    ❧
+                </div>
+
+            </section>
+
+
+
+            <!-- RINGKASAN TOKO -->
+            <section class="section-heading">
+
+                <div>
+                    <h3>Ringkasan Toko</h3>
+
+                    <p class="muted">
+                        Informasi singkat aktivitas Foliora.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- KARTU STATISTIK -->
+            <div class="stats-grid">
+
+
+                <!-- Total Buku -->
+                <article class="stat-card">
+
+                    <span class="stat-icon">▤</span>
+
+                    <p>Total Judul Buku</p>
+
+                    <h2 id="totalBooks">0</h2>
+
+                    <small>Judul dalam katalog</small>
+
+                </article>
+
+
+                <!-- Total Stok -->
+                <article class="stat-card">
+
+                    <span class="stat-icon">▣</span>
+
+                    <p>Total Stok Tersedia</p>
+
+                    <h2 id="totalStock">0</h2>
+
+                    <small>Eksemplar buku</small>
+
+                </article>
+
+
+                <!-- Total Pesanan -->
+                <article class="stat-card">
+
+                    <span class="stat-icon">♡</span>
+
+                    <p>Total Pesanan</p>
+
+                    <h2 id="totalOrders">0</h2>
+
+                    <small>Pesanan tersimpan</small>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- MENU AKSES CEPAT -->
+            <section class="section-heading">
+
+                <div>
+                    <h3>Akses Cepat</h3>
+
+                    <p class="muted">
+                        Pilih aktivitas yang ingin kamu lakukan.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <div class="menu-grid">
+
+
+                <!-- MENU KATALOG -->
+                <a class="menu-card" href="stok.html">
+
+                    <span class="menu-icon">▤</span>
+
+                    <h3>Informasi Stok / Katalog</h3>
+
+                    <p>
+                        Lihat koleksi buku, harga,
+                        dan kelola jumlah stok.
+                    </p>
+
+                    <span class="card-link">
+                        Buka katalog →
+                    </span>
+
+                </a>
+
+
+                <!-- MENU PEMESANAN -->
+                <a class="menu-card" href="checkout.html">
+
+                    <span class="menu-icon">＋</span>
+
+                    <h3>Pemesanan Buku</h3>
+
+                    <p>
+                        Catat informasi pelanggan
+                        dan buat pesanan baru.
+                    </p>
+
+                    <span class="card-link">
+                        Buat pesanan →
+                    </span>
+
+                </a>
+
+
+                <!-- MENU TRACKING -->
+                <a class="menu-card" href="tracking.html">
+
+                    <span class="menu-icon">⌁</span>
+
+                    <h3>Tracking Pengiriman</h3>
+
+                    <p>
+                        Cari status pengiriman
+                        menggunakan nomor DO.
+                    </p>
+
+                    <span class="card-link">
+                        Lacak pesanan →
+                    </span>
+
+                </a>
+
+
+                <!-- MENU HISTORY -->
+                <a class="menu-card"
+                   href="checkout.html#riwayat">
+
+                    <span class="menu-icon">▧</span>
+
+                    <h3>Laporan & History Transaksi</h3>
+
+                    <p>
+                        Lihat daftar pesanan
+                        yang telah dicatat.
+                    </p>
+
+                    <span class="card-link">
+                        Lihat transaksi →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                © 2026 Foliora Bookstore.
+                Every Page, A New Journey.
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Foliora</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Menghubungkan data pengguna -->
+    <script src="js/data.js" defer></script>
+
+    <!-- Menghubungkan JavaScript login -->
+    <script src="js/login.js" defer></script>
+</head>
+
+<body class="login-page">
+
+    <main class="login-shell">
+
+        <!-- BAGIAN KIRI -->
+        <section class="login-art">
+
+            <div class="brand brand-light">
+                <span class="brand-mark">❧</span>
+                <span>FOLIORA</span>
+            </div>
+
+            <div class="login-art-copy">
+                <p class="eyebrow">
+                    A LITTLE SPACE FOR BIG STORIES
+                </p>
+
+                <h1>
+                    Temukan cerita<br>
+                    yang tinggal di hati.
+                </h1>
+
+                <p>
+                    Jelajahi koleksi bacaan pilihan dan mulai
+                    perjalanan baru di setiap halaman.
+                </p>
+            </div>
+
+            <div class="art-bottom">
+                Every Page, A New Journey.
+            </div>
+
+        </section>
+
+
+        <!-- BAGIAN KANAN: FORM LOGIN -->
+        <section class="login-panel">
+
+            <div class="login-form-wrap">
+
+                <div class="brand brand-dark">
+                    <span class="brand-mark">❧</span>
+                    <span>FOLIORA</span>
+                </div>
+
+                <p class="eyebrow">
+                    SELAMAT DATANG KEMBALI
+                </p>
+
+                <h2>Masuk ke akunmu</h2>
+
+                <p class="muted">
+                    Masukkan email dan password untuk melanjutkan.
+                </p>
+
+
+                <!-- FORM LOGIN -->
+                <form id="loginForm" class="form-stack">
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+
+                        <input
+                            class="form-control"
+                            type="email"
+                            id="email"
+                            placeholder="nama@email.com"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <input
+                            class="form-control"
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required
+                        >
+                    </div>
+
+
+                    <button
+                        class="btn btn-primary btn-block"
+                        type="submit"
+                    >
+                        Login <span aria-hidden="true">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- LINK LUPA PASSWORD DAN DAFTAR -->
+                <div class="login-links">
+
+                    <button
+                        class="text-button"
+                        type="button"
+                        data-open-modal="forgotModal"
+                    >
+                        Lupa Password?
+                    </button>
+
+                    <span>
+                        Belum punya akun?
+
+                        <button
+                            class="text-button strong"
+                            type="button"
+                            data-open-modal="registerModal"
+                        >
+                            Daftar
+                        </button>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- POP-UP LUPA PASSWORD -->
+    <div class="modal" id="forgotModal" aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                type="button"
+                data-close-modal
+                aria-label="Tutup"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow">BANTUAN AKUN</p>
+
+            <h2>Lupa password?</h2>
+
+            <p class="muted">
+                Masukkan email akunmu untuk memeriksa
+                apakah email tersebut terdaftar.
+            </p>
+
+            <form id="forgotForm" class="form-stack">
+
+                <div class="form-group">
+
+                    <label for="forgotEmail">Email</label>
+
+                    <input
+                        class="form-control"
+                        id="forgotEmail"
+                        type="email"
+                        required
+                        placeholder="nama@email.com"
+                    >
+
+                </div>
+
+                <button
+                    class="btn btn-primary btn-block"
+                    type="submit"
+                >
+                    Kirim instruksi
+                </button>
+
+            </form>
+
+            <p
+                id="forgotMessage"
+                class="form-message"
+                aria-live="polite"
+            ></p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- POP-UP DAFTAR AKUN -->
+    <div class="modal" id="registerModal" aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                type="button"
+                data-close-modal
+                aria-label="Tutup"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow">GABUNG BERSAMA FOLIORA</p>
+
+            <h2>Buat akun baru</h2>
+
+            <form id="registerForm" class="form-stack">
+
+                <div class="form-group">
+
+                    <label for="regName">Nama lengkap</label>
+
+                    <input
+                        class="form-control"
+                        id="regName"
+                        required
+                        placeholder="Nama kamu"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="regEmail">Email</label>
+
+                    <input
+                        class="form-control"
+                        id="regEmail"
+                        type="email"
+                        required
+                        placeholder="nama@email.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="regPassword">Password</label>
+
+                    <input
+                        class="form-control"
+                        id="regPassword"
+                        type="password"
+                        minlength="6"
+                        required
+                        placeholder="Minimal 6 karakter"
+                    >
+
+                </div>
+
+
+                <button
+                    class="btn btn-primary btn-block"
+                    type="submit"
+                >
+                    Daftar
+                </button>
+
+            </form>
+
+            <p
+                id="registerMessage"
+                class="form-message"
+                aria-live="polite"
+            ></p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
