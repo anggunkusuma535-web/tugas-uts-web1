@@ -1,3 +1,4 @@
+
 # FOLIORA – Website Toko Buku
 
 **Every Page, A New Journey.**
@@ -332,3 +333,4 @@ Website Foliora diharapkan dapat menjadi bentuk penerapan keterampilan dalam mem
 
 **Project UTS Pemrograman Web 1 – Foliora**  
 *Every Page, A New Journey.*
+
