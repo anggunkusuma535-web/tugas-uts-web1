@@ -257,56 +257,48 @@ Screenshot berikut digunakan sebagai bukti bahwa setiap halaman dan fitur websit
 
 Menampilkan halaman awal Foliora yang berisi form email dan password, tombol login, serta fitur Forgot Password dan Register.
 
-Simpan screenshot dengan nama:
-
-`screenshots/01-login.png`
+![Screenshot Latihan 1](Screenshot/01-login.png)
 
 **2. Halaman Dashboard**
 
 Menampilkan halaman utama setelah pengguna berhasil login, termasuk sapaan pengguna, informasi jumlah buku, total stok, dan navigasi website.
 
-Simpan screenshot dengan nama:
+![Screenshot Latihan 1](Screenshot/02-dashboard.png)
 
-`screenshots/02-dashboard.png`
 
 **3. Halaman Katalog Buku**
 
 Menampilkan daftar buku beserta cover, kode barang, nama buku, jenis buku, edisi, harga, dan jumlah stok.
 
-Simpan screenshot dengan nama:
+![Screenshot Latihan 1](Screenshot/03-stok.png)
 
-`screenshots/03-stok.png`
 
 **4. Form Riwayat Pemesanan**
 
 Menampilkan daftar pesanan yang telah dibuat melalui halaman checkout beserta informasi nomor DO dan status pesanan.
-Simpan screenshot dengan nama:
 
-`screenshots/04-riwayat-pemesanan.png`
+![Screenshot Latihan 1](Screenshot/04-riwayat-pemesanan.png)
+
 
 **5. Halaman Checkout**
 
 Menampilkan form pemesanan yang berisi data pelanggan, pilihan buku, jumlah pembelian, metode pembayaran, dan ringkasan total pembayaran.
 
-Simpan screenshot dengan nama:
+![Screenshot Latihan 1](Screenshot/05-checkout.png)
 
-`screenshots/05-checkout.png`
 
 **6. Halaman Tracking**
 
 Menampilkan hasil pencarian nomor DO, informasi pelanggan, ekspedisi, status pengiriman, dan riwayat perjalanan paket.
 
-Simpan screenshot dengan nama:
-
-`screenshots/06-tracking.png`
+![Screenshot Latihan 1](Screenshot/06-tracking.png)
 
 **8. Bukti Validasi Login**
 
 Menampilkan pesan kesalahan ketika pengguna memasukkan email atau password yang tidak sesuai.
 
-Simpan screenshot dengan nama:
+![Screenshot Latihan 1](Screenshot/07-validasi-login.png)
 
-`screenshots/07-validasi-login.png`
 
 ## 8. Alur Penggunaan Website
 
