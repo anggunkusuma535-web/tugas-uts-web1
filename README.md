@@ -313,7 +313,23 @@ Alur penggunaan website Foliora adalah sebagai berikut:
 7. Data pesanan disimpan dan ditampilkan pada riwayat pesanan.
 8. Pengguna dapat membuka halaman tracking untuk melihat informasi pengiriman berdasarkan nomor DO.
 
-## 9. Kesimpulan
+## 9. Video Presentasi Project
+
+Video berikut merupakan dokumentasi presentasi dan demonstrasi website Foliora sebagai bagian dari penyelesaian Ujian Tengah Semester mata kuliah Pemrograman Web 1.
+
+Dalam video ini dijelaskan mengenai:
+- Proses login dan validasi akun.
+- Tampilan Dashboard dan Greeting berdasarkan waktu.
+- Informasi katalog dan stok buku.
+- Proses pemesanan melalui halaman Checkout.
+- Riwayat transaksi.
+- Informasi pengiriman dan fitur Tracking.
+
+**Link Video Presentasi:**
+
+[Klik di sini untuk menonton video presentasi Foliora](https://youtu.be/7BgjEl6RfXg)
+
+## 10. Kesimpulan
 
 Pembuatan website Foliora merupakan implementasi materi Pemrograman Web 1 dengan memanfaatkan HTML, CSS, dan JavaScript. Website ini dirancang untuk memberikan simulasi sistem toko buku yang memiliki fitur login, dashboard, pengelolaan katalog, pemesanan, dan pelacakan pengiriman.
 
